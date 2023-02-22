@@ -1,0 +1,32 @@
+#slacker
+#PyJWT == 1.7.1
+# aiologger
+# aiohttp
+# aiofiles
+PyYAML
+#kafka-python
+websocket_client
+requests
+redis
+PyMySQL
+#JPype1
+#sshtunnel
+#quickfix # windows系统下直接通过pip3 install 报错
+selenium
+sseclient-py
+#Flask
+#Flask-Bootstrap
+#Flask-WTF
+#WTForms
+# web3==5.12.0
+werkzeug
+fastapi
+pydantic
+stripe #
+# pexpect==4.7.0
+# paramiko==2.6.0
+# pycrypto==2.6.1
+pycryptodome==3.10.1
+
+nacos-sdk-python
+uvicorn[standard]
