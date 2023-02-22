@@ -1,0 +1,184 @@
+---
+host: http://urlxxx/api/rmn/v2
+chain_host: http://urlxxx
+rts_node_host: http://urlxxx/roxe-node
+
+env: "test"
+
+node_rsa_private_key: "../RTS/keys/rsa_private_key.pem"
+
+rmn_id: xxxxx
+rts_roxe_id: xxxxx
+
+is_check_db: True
+sql_cfg:
+  mysql_host: xxxx
+#  mysql_host: 172.17.3.134
+  port: 3306
+  user: xxxx
+  password: xxx
+  db: xx
+
+iban:
+  GBP: GB33BUKB20201555555555
+  BRL: BR2700000000123121231412231C1
+  EUR: FR12345678900000000000
+  USD: US12345678900000000000
+
+# sn 节点
+rmn_node_a: &rmn_node1 xxxxxx
+rmn_node_b: &rmn_node2 xxxxx
+rmn_node_c: &rmn_node3 xxxxx
+mock_node: &mock_node xxxxx
+nium_node: sn.in.nium
+sn_roxe_nium: &nium_node xxxxx
+sn_roxe_terrapay: &terrapay_node xxxxx
+sn_roxe_cebuana: &cebuana_node xxxxx
+sn_usd_us: *rmn_node1
+sn_usd_gb: *rmn_node2
+sn_gbp_us: *rmn_node1
+sn_gbp_gb: *rmn_node2
+sn_eur_fr: *rmn_node2
+rpp_node_php: *rmn_node1
+sn_php_ph: *rmn_node1
+
+# pn节点
+pn_usd_us: pn.test.us
+pn_usd_gb: pn.test.gb
+pn_gbp_gb: pn.test.gb
+pn_gbp_us: pn.test.us
+pn_eur_fr: pn.fr.eur  # 关联节点 finknight1z3
+#pn_usd_us_b: pn.us.usd  # 关联节点 huu4lssdbmbt
+pn_php_ph: pn.test.us
+
+# 归属于channel的节点，在主流程中RMN不向该类型节点发送RCCT报文
+channel_nodes:
+  - *mock_node
+  - *terrapay_node
+  - *nium_node
+  - *cebuana_node
+# 节点的api_key和sec_key
+api_key: xxxxx
+sec_key: xxxxx
+
+out_bank_info:
+  USD:
+    recipientCountry: US
+    routingNumber: "111000025"
+    accountNumber: "000123123123"
+    accountType: individual
+    payOutMethod: bank
+  TerraPay:
+#    amount: '10.2'
+#    payOutMethod: bank
+    senderSourceOfFund: Salary
+    senderIdExpireDate: '2023-09-26'
+#    receiverBankCode: AUBKPHMM
+#    receiverIdType: nationalidcard
+#    receiverIdNumber: '123456789'
+#    receiverIdExpireDate: '2033-09-26'
+#    receiverBirthday: '1990-06-28'
+  PHP:
+    amount: '10.2'
+    payOutMethod: bank
+    senderSourceOfFund: Salary
+    senderIdExpireDate: '2023-09-26'
+    receiverBankCode: AUBKPHMM
+    receiverIdType: nationalidcard
+    receiverIdNumber: '123456789'
+    receiverIdExpireDate: '2033-09-26'
+    receiverBirthday: '1990-06-28'
+
+# account是iban时，因为dbtrAgt，cdtrAgt等agt为必填项，因此填入name
+iban_agent_info:
+  finInstnId:
+    nm: "rich bank aaa"
+
+bic_agent_info:
+  USD:
+    finInstnId:
+      bicFI: BOFAUS3DAU2
+      nm: "rich bank"
+  GBP:
+    finInstnId:
+      bicFI: MOLUGB22
+      nm: "rich bank"
+
+  INR:
+    finInstnId:
+      bicFI: VIJBINBB123
+      nm: "rich bank"
+  MYR:
+    finInstnId:
+      bicFI: MBBEMYKL
+  PHP:
+    finInstnId:
+      bicFI: AUBKPHMM
+  CNY:
+    finInstnId:
+      bicFI: CNUNIONPAY
+  INR_TP:
+    finInstnId:
+      bicFI: HDFC0001626
+  IDR:
+    finInstnId:
+      bicFI: BMAINDMB
+  THB:
+    finInstnId:
+      bicFI: BKKBTHBK
+  GHS:
+    finInstnId:
+      bicFI: STBGGHAC
+  VND:
+    finInstnId:
+      bicFI: VBBLUKAG
+  ARS:
+    finInstnId:
+      bicFI: BACONAAR
+  CLP:
+    finInstnId:
+      bicFI: BANBICL
+  COP:
+    finInstnId:
+      bicFI: COLOCOBMBAQ
+  PEN:
+    finInstnId:
+      bicFI: BANCDER
+  BRL:
+    finInstnId:
+      bicFI: UNPABRPR
+
+ncc_agent_info:
+  USD:
+    finInstnId:
+      clrSysMmbId:
+        clrSysCd: USABA
+        mmbId: "111000025"
+      nm: "rich bank"
+  GBP:
+    finInstnId:
+      clrSysMmbId:
+        clrSysCd: GBDSC
+        mmbId: "12341234"
+      nm: "rich bank"
+  PHP:
+    finInstnId:
+      clrSysMmbId:
+        clrSysCd: USABA
+        mmbId: "12341234"
+      nm: "rich bank"
+
+query_tx_info:
+  txId: "480066324408565760"
+  nodeCode: "f3viuzqrqq4d"
+  msgId: "0202202171645064490854684"
+  endToEndId: "test_rmn_1645064490854"
+  msgTp: "RCCT"
+
+# testB, 另外一套测试环境的测试数据
+query_tx_info_uat:
+  txId: "508797347631726592"
+  nodeCode: "fape1meh4bsz"
+  msgId: "0202205071651914500431070"
+  endToEndId: "test_rmn_1651914500430"
+  msgTp: "RCCT"
