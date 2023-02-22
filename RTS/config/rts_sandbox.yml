@@ -1,0 +1,97 @@
+
+host: https://sandbox-xxxx/api/rts/v2
+chain_host: http://xxxx/v1
+
+api_id: xxxx
+sec_key: xxxx
+ssl_pub_key: keys/rts_rsa_public_key.pem
+ssl_pri_key: keys/rsa_private_key.pem
+
+node_code: FIAT_US_0001
+
+# 通过合约转账的链上账户，需配合私钥使用
+chain_account: rsstestbtc11
+chain_pri_key: xxxx
+
+
+rmn_node: &rmn_node fape1meh4bsz
+mock_node: &mock_node ijeobkhzuspu
+gme_node: &gme_node gmeremit2d5a
+rana_node: &rana_node ranaexp5a1sd
+terrapay_node_ph: &terrapay_node_ph huuzj2hpycrx
+terrapay_node_th: &terrapay_node_th hpkk2guqn54w
+nium_node: &nium_node iovqxmagbm5m
+cebuana_node: &cebuana_node ponoim2hcpin
+gcash_node: &gcash_node idlzjsbeza4m
+checkout_node: &checkout_node hpuuz5siv3tr
+
+channel_name:
+  *mock_node: MOCK
+  *gme_node: GME
+  *rana_node: RANA
+  *terrapay_node_ph: TERRAPAY
+  *terrapay_node_th: TERRAPAY
+  *nium_node: NIUM
+  *cebuana_node: CEBUANA
+  *gcash_node: GCASH
+  *checkout_node: CHECKOUT
+
+channel_nodes:
+  - *mock_node
+  - *terrapay_node_ph
+  - *terrapay_node_th
+  - *nium_node
+  - *cebuana_node
+  - *gcash_node
+
+#node_code: FIAT_US_0001
+node_code_sn:
+  PHP: crxaptw4rqcf
+  US: *rmn_node
+  GB: huu4lssdbmbt
+  CNY: hpuuz5siv3tr
+  INR: hqw4usgdmgnx
+
+node_code_pn:
+  US: pn.test.us
+  GB: pn.test.gb
+  PH: pn.test.ph
+user_account: agjyrafzwlng
+user_account_2: z5hkbojz2tjn
+
+# 100276/US
+sourceRoxeAccount: "fzrszy2uh2ez"
+targetRoxeAccount: "f3viuzqrqq4d"
+# 100356/PH
+sourceRoxeAccount_2: "v4twt4yhqtft"
+targetRoxeAccount_2: "crxaptw4rqcf"
+
+token_1: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiI4NiIsImlzcyI6IlJPWEUiLCJhdWQiOiIxMDAyNzYiLCJzdWIiOiJVU0VSX0xPR0lOIiwibmJmIjoxNjQ1NzgzNDY3fQ.kMAXg-qe7wxpwtfVRMuivcRqUmVSnRl8E0ukwn8wvh0"
+userId_1: "100276"
+
+# 持有ach账户的user信息
+ach_user_token: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiIxIiwiaXNzIjoiUk9YRSIsImF1ZCI6IjEwMDM1NiIsInN1YiI6IlVTRVJfTE9HSU4iLCJuYmYiOjE2NDYwMjg5ODZ9.5XHfFKtoqJYYi_KNVPxOfFquepBeF8k3rMKvIScm0hk"
+ach_user_id: "100356"
+ach_user_account: "v4twt4yhqtft"
+
+currency_fiat_ro:
+  - fiat: USD
+    ro: USD.ROXE
+    country: US
+    innerNodeCode: ""
+    outerNodeCode: ""
+
+is_check_db: False
+sql_cfg:
+  mysql_host: xxxx
+  port: 3306
+  user: xxxx
+  password: xxxx
+  db: xxxx
+
+out_currency_info:
+  - fiat: USD
+    country: US
+    innerNodeCode: ""
+    outerNodeCode: ""
+    node_code: f3viuzqrqq4d

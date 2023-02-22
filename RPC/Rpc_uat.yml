@@ -1,0 +1,48 @@
+host: http://xxxx/roxe-rpc/inner/roxepay
+chain_host: http://xxxx:18888/v1
+
+
+is_check_db: True
+#sql_cfg:
+#  mysql_host: rw-mysql-roxe-bjtest-aly.roxepro.top
+#  port: 3306
+#  user: rwuser
+#  password: Ro@123123
+#  db: roxe_rpc
+sql_cfg:
+  mysql_host: xxxx
+  port: 3306
+  user: xxxx
+  password: xxxx
+  db: xxxx
+
+channelsQueryRequest:
+  callSource: RSS
+  group: ROXE
+  channelType: OUT
+  country: PH
+#  payoutMethod: wallet
+  payoutMethod: BANK
+  currency: PHP
+#  name: GCASH
+#  name: CEBUANA
+  name: TERRAPAY
+  strategy:
+    - NAME
+
+
+payoutInfoJson:
+  accountNumber: '09612803885'
+  receiverCurrency: PHP
+  amount: 100
+  senderFirstName: ZHANG
+  senderLastName: SAN
+  senderBeneficiaryRelationship: Friend
+  senderSourceOfFund: Salary
+  senderIdType: NATIONAL_ID
+  senderIdNumber: '123456789'
+  senderCountry: PH
+  receiverFirstName: Sean Warwick
+  receiverLastName: Dela Cruz
+#  receiverBankBIC: '123'
+#  receiverBankNCC: '123'

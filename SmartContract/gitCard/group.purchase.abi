@@ -1,0 +1,1283 @@
+{
+    "____comment": "This file was generated with roxe-abigen. DO NOT EDIT ",
+    "version": "roxe::abi/1.1",
+    "types": [
+        {
+            "new_type_name": "address",
+            "type": "name"
+        }
+    ],
+    "structs": [
+        {
+            "name": "ActRegistry",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_SUBSCRIPTION_TOKEN",
+                    "type": "extended_symbol"
+                },
+                {
+                    "name": "_ACTIVITIY_IDS",
+                    "type": "pair_extended_symbol_IDSet[]"
+                }
+            ]
+        },
+        {
+            "name": "ActivityConf",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_PLATE_MANAGER_",
+                    "type": "address"
+                },
+                {
+                    "name": "_SERVER_PROVIDER_",
+                    "type": "address"
+                },
+                {
+                    "name": "_SPONSOR_",
+                    "type": "address"
+                },
+                {
+                    "name": "_CONSTRAINT_START_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_GROUP_CONDUCTORS_",
+                    "type": "address[]"
+                },
+                {
+                    "name": "_SPONSOR_SHARE_RATIO_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_HALFWAY_REDEEMABLE_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_PERCENT_REDEEM_FEE_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_BUS_FIRST_REDEEM_RATIO_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_BUS_FIRST_REDEEM_AMOUNT_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_PERFORMANCE_RATIO_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GROUP_MIN_PERSON_COUNT_",
+                    "type": "uint32"
+                },
+                {
+                    "name": "_GROUP_START_TIME",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GROUP_TERMINAL_TIME",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GROUP_STANDARD_AMOUNT_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_AMOUNT_REACH_TO_STANDARD_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GROUP_PURCHASE_MIN_AMOUNT_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GROUP_PURCHASE_MAX_AMOUNT_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_AUTO_GROUPING_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_CAN_EXCEED_TOTAL_AMOUNT_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_REBATE_ORDER_NOW_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_CAN_CANCEL_ORDER_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_REBATE_SHARE_RATIO_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_CANCEL_ORDER_RATIO_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_SUBSCRIPTION_TOKEN_",
+                    "type": "extended_symbol"
+                },
+                {
+                    "name": "_GIFT_TOKEN_",
+                    "type": "extended_symbol"
+                },
+                {
+                    "name": "_GIFT_TOKEN_TOTAL_AMOUNT_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GIFT_TOKEN_FREEZED_AMOUNT_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GIFT_TOKEN_PERFORM_AMOUNT_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GIFT_TOKEN_STANDARD_PRICE_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_GIFT_TOKEN_DISCOUNT_PRICE_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_PLATFORM_SHARE_RATIO_",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "ActivityStorage",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_ACTIVITY_ID_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_ACTIVITY_STORE_",
+                    "type": "ActivityConf"
+                },
+                {
+                    "name": "_INITIALIZED_",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "AddressSet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_ADDRSET_",
+                    "type": "address[]"
+                }
+            ]
+        },
+        {
+            "name": "GROUP",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_GROUPLIST_",
+                    "type": "pair_uint64_IDSet[]"
+                },
+                {
+                    "name": "_GROUPUSERS_",
+                    "type": "pair_uint64_AddressSet[]"
+                },
+                {
+                    "name": "_USERORDERLIST_",
+                    "type": "pair_uint64_UserOrderSet[]"
+                },
+                {
+                    "name": "_GROUPORDERS_",
+                    "type": "pair_uint64_IDSet[]"
+                }
+            ]
+        },
+        {
+            "name": "GROUPFactory",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_CONTROLLER_",
+                    "type": "address"
+                },
+                {
+                    "name": "_BLACKLISTS_",
+                    "type": "address[]"
+                },
+                {
+                    "name": "_REGISTRY_USER_GROUPS_",
+                    "type": "pair_address_IDSet[]"
+                },
+                {
+                    "name": "_REGISTRY_BUSINESS_",
+                    "type": "address[]"
+                },
+                {
+                    "name": "_REGISTRY_",
+                    "type": "pair_extended_symbol_ActRegistry[]"
+                },
+                {
+                    "name": "_CREDIT_SCORE_REQUIRED_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_CREDIT_REQUIRED_",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "GroupInfoStorage",
+            "base": "GroupStorage",
+            "fields": []
+        },
+        {
+            "name": "GroupStorage",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_GROUP_ID_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_SPONSOR_",
+                    "type": "address"
+                },
+                {
+                    "name": "_TIME_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_MAX_GIFT_AMOUNT_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_DISCOUNT_PRICE_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_MIN_PERSON_COUNT",
+                    "type": "uint32"
+                },
+                {
+                    "name": "_PLATFORMAMOUNT_",
+                    "type": "int64"
+                },
+                {
+                    "name": "_BUSINESSAMOUNT_",
+                    "type": "int64"
+                },
+                {
+                    "name": "_ISSUED_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_FINISH_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_CANCELED_",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "IDSet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_IDSET_",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "OrderRecord",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_ORDER_ID_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_CUSTOMER_",
+                    "type": "address"
+                },
+                {
+                    "name": "_RECEIVER_",
+                    "type": "address"
+                },
+                {
+                    "name": "_PAYAMOUNT_",
+                    "type": "int64"
+                },
+                {
+                    "name": "_INVITOR_",
+                    "type": "address"
+                },
+                {
+                    "name": "_TIME_",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_REBATED_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_CANCELED_",
+                    "type": "bool"
+                },
+                {
+                    "name": "_CONFIRMED_",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "OrderStorage",
+            "base": "OrderRecord",
+            "fields": []
+        },
+        {
+            "name": "UserOrderSet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_USER_ORDER_SET_",
+                    "type": "pair_address_uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "addblackuser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "address"
+                }
+            ]
+        },
+        {
+            "name": "addconductor",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "address"
+                }
+            ]
+        },
+        {
+            "name": "autogroup",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "auto_group",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "collect",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_amount",
+                    "type": "int64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "confirmorder",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_order_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "createact",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "server_provider",
+                    "type": "address"
+                },
+                {
+                    "name": "_plat_provider",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sponsor",
+                    "type": "address"
+                },
+                {
+                    "name": "subscriptoken",
+                    "type": "extended_symbol"
+                },
+                {
+                    "name": "giftoken",
+                    "type": "extended_symbol"
+                },
+                {
+                    "name": "standard_price",
+                    "type": "uint64"
+                },
+                {
+                    "name": "discount_price",
+                    "type": "uint64"
+                },
+                {
+                    "name": "total_amount",
+                    "type": "uint64"
+                },
+                {
+                    "name": "standard_amount",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "delblackuser",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "address"
+                }
+            ]
+        },
+        {
+            "name": "delconductor",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user",
+                    "type": "address"
+                }
+            ]
+        },
+        {
+            "name": "delivery",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "extended_symbol",
+            "base": "",
+            "fields": [
+                {
+                    "name": "symbol",
+                    "type": "symbol"
+                },
+                {
+                    "name": "contract",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "freezegift",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "amount",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "init",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "start_time",
+                    "type": "uint64"
+                },
+                {
+                    "name": "terminal_time",
+                    "type": "uint64"
+                },
+                {
+                    "name": "amount_reach_to_standard",
+                    "type": "uint64"
+                },
+                {
+                    "name": "halfway_redeemable",
+                    "type": "bool"
+                },
+                {
+                    "name": "percent_redeem_fee",
+                    "type": "uint64"
+                },
+                {
+                    "name": "group_min_person_count",
+                    "type": "uint32"
+                },
+                {
+                    "name": "group_min_amount",
+                    "type": "uint64"
+                },
+                {
+                    "name": "group_max_amount",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "newgpbuy",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_order_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_sponsor",
+                    "type": "address"
+                },
+                {
+                    "name": "_min_person_count",
+                    "type": "uint32"
+                },
+                {
+                    "name": "_discount_price",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_max_amount",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_receiver",
+                    "type": "address"
+                },
+                {
+                    "name": "_subscript_amounts",
+                    "type": "int64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "newgroup",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_sponsor",
+                    "type": "address"
+                },
+                {
+                    "name": "_min_person_count",
+                    "type": "uint32"
+                },
+                {
+                    "name": "_discount_price",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_max_amount",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pair_address_IDSet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "address"
+                },
+                {
+                    "name": "value",
+                    "type": "IDSet"
+                }
+            ]
+        },
+        {
+            "name": "pair_address_uint64",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "address"
+                },
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "pair_extended_symbol_ActRegistry",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "extended_symbol"
+                },
+                {
+                    "name": "value",
+                    "type": "ActRegistry"
+                }
+            ]
+        },
+        {
+            "name": "pair_extended_symbol_IDSet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "extended_symbol"
+                },
+                {
+                    "name": "value",
+                    "type": "IDSet"
+                }
+            ]
+        },
+        {
+            "name": "pair_uint64_AddressSet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "uint64"
+                },
+                {
+                    "name": "value",
+                    "type": "AddressSet"
+                }
+            ]
+        },
+        {
+            "name": "pair_uint64_IDSet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "uint64"
+                },
+                {
+                    "name": "value",
+                    "type": "IDSet"
+                }
+            ]
+        },
+        {
+            "name": "pair_uint64_UserOrderSet",
+            "base": "",
+            "fields": [
+                {
+                    "name": "key",
+                    "type": "uint64"
+                },
+                {
+                    "name": "value",
+                    "type": "UserOrderSet"
+                }
+            ]
+        },
+        {
+            "name": "performance",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_amount",
+                    "type": "int64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "purchase",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_order_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_buyer",
+                    "type": "address"
+                },
+                {
+                    "name": "_reveiver",
+                    "type": "address"
+                },
+                {
+                    "name": "_invitor",
+                    "type": "address"
+                },
+                {
+                    "name": "_subscript_amounts",
+                    "type": "int64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "rebate",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_order_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "revokegroup",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "revokeorder",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_order_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "setbonusconf",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "platform_share_ratio",
+                    "type": "uint64"
+                },
+                {
+                    "name": "sponsor_share_ratio",
+                    "type": "uint64"
+                },
+                {
+                    "name": "rebate_share_ratio",
+                    "type": "uint64"
+                },
+                {
+                    "name": "bus_first_redeem_ratio",
+                    "type": "uint64"
+                },
+                {
+                    "name": "performance_ratio",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setcelratio",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_cancel_order_ratio",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setcrdscore",
+            "base": "",
+            "fields": [
+                {
+                    "name": "required",
+                    "type": "bool"
+                },
+                {
+                    "name": "score",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setexceed",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "can_exceed",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "setfreestart",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "free",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "setordcancel",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_cancel",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "setrebate",
+            "base": "",
+            "fields": [
+                {
+                    "name": "business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_rebate_now",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "unfreezegift",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_business",
+                    "type": "address"
+                },
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "amount",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "updatectler",
+            "base": "",
+            "fields": [
+                {
+                    "name": "controller",
+                    "type": "address"
+                }
+            ]
+        },
+        {
+            "name": "withdraw",
+            "base": "",
+            "fields": [
+                {
+                    "name": "_activity",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_group_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "_amount",
+                    "type": "int64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addblackuser",
+            "type": "addblackuser",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addconductor",
+            "type": "addconductor",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "autogroup",
+            "type": "autogroup",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "collect",
+            "type": "collect",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "confirmorder",
+            "type": "confirmorder",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "createact",
+            "type": "createact",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "delblackuser",
+            "type": "delblackuser",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "delconductor",
+            "type": "delconductor",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "delivery",
+            "type": "delivery",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "freezegift",
+            "type": "freezegift",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "init",
+            "type": "init",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "newgpbuy",
+            "type": "newgpbuy",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "newgroup",
+            "type": "newgroup",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "performance",
+            "type": "performance",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "purchase",
+            "type": "purchase",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "rebate",
+            "type": "rebate",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "revokegroup",
+            "type": "revokegroup",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "revokeorder",
+            "type": "revokeorder",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setbonusconf",
+            "type": "setbonusconf",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setcelratio",
+            "type": "setcelratio",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setcrdscore",
+            "type": "setcrdscore",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setexceed",
+            "type": "setexceed",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setfreestart",
+            "type": "setfreestart",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setordcancel",
+            "type": "setordcancel",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setrebate",
+            "type": "setrebate",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "unfreezegift",
+            "type": "unfreezegift",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "updatectler",
+            "type": "updatectler",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "withdraw",
+            "type": "withdraw",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "activities",
+            "type": "ActivityStorage",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "groupfactory",
+            "type": "GROUPFactory",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "groupinfo",
+            "type": "GroupInfoStorage",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "groups",
+            "type": "GROUP",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "orders",
+            "type": "OrderStorage",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}

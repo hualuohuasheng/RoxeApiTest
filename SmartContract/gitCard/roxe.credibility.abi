@@ -1,0 +1,123 @@
+{
+    "____comment": "This file was generated with roxe-abigen. DO NOT EDIT ",
+    "version": "roxe::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "account_credit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "credit_score",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "account_vip_class",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "vip",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "decscore",
+            "base": "",
+            "fields": [
+                {
+                    "name": "credit_account",
+                    "type": "name"
+                },
+                {
+                    "name": "score",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "decvip",
+            "base": "",
+            "fields": [
+                {
+                    "name": "vip_account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "incscore",
+            "base": "",
+            "fields": [
+                {
+                    "name": "credit_account",
+                    "type": "name"
+                },
+                {
+                    "name": "score",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "incvip",
+            "base": "",
+            "fields": [
+                {
+                    "name": "vip_account",
+                    "type": "name"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "decscore",
+            "type": "decscore",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "decvip",
+            "type": "decvip",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "incscore",
+            "type": "incscore",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "incvip",
+            "type": "incvip",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "credits",
+            "type": "account_credit",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "vipclass",
+            "type": "account_vip_class",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}

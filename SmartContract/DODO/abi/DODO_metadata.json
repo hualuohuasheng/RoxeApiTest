@@ -1,0 +1,2071 @@
+{
+	"compiler": {
+		"version": "0.6.9+commit.3e3065ac"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "buyer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "receiveBase",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "payQuote",
+						"type": "uint256"
+					}
+				],
+				"name": "BuyBaseToken",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "maintainer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isBaseToken",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "ChargeMaintainerFee",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "payer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isBaseToken",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "ChargePenalty",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "baseTokenAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "quoteTokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "ClaimAssets",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "payer",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isBaseToken",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "lpTokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "Deposit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isBaseToken",
+						"type": "bool"
+					}
+				],
+				"name": "Donate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferPrepared",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "payBase",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "receiveQuote",
+						"type": "uint256"
+					}
+				],
+				"name": "SellBaseToken",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldGasPriceLimit",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newGasPriceLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "UpdateGasPriceLimit",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldK",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newK",
+						"type": "uint256"
+					}
+				],
+				"name": "UpdateK",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldLiquidityProviderFeeRate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newLiquidityProviderFeeRate",
+						"type": "uint256"
+					}
+				],
+				"name": "UpdateLiquidityProviderFeeRate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldMaintainerFeeRate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newMaintainerFeeRate",
+						"type": "uint256"
+					}
+				],
+				"name": "UpdateMaintainerFeeRate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "payer",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "isBaseToken",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "lpTokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdraw",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "_BASE_BALANCE_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_BASE_BALANCE_LIMIT_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_BASE_CAPITAL_RECEIVE_QUOTE_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_BASE_CAPITAL_TOKEN_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_BASE_TOKEN_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_BUYING_ALLOWED_",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "_CLAIMED_",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_CLOSED_",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_DEPOSIT_BASE_ALLOWED_",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_DEPOSIT_QUOTE_ALLOWED_",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_GAS_PRICE_LIMIT_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_K_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_LP_FEE_RATE_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_MAINTAINER_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_MT_FEE_RATE_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_NEW_OWNER_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_ORACLE_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_OWNER_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_QUOTE_BALANCE_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_QUOTE_BALANCE_LIMIT_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_QUOTE_CAPITAL_RECEIVE_BASE_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_QUOTE_CAPITAL_TOKEN_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_QUOTE_TOKEN_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_RAboveBackToOne",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "payBaseToken",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "baseBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "targetBaseAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "_RAboveBuyBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "payQuoteToken",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "B0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "B1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "B2",
+						"type": "uint256"
+					}
+				],
+				"name": "_RAboveIntegrate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "baseBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "targetBaseAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "_RAboveSellBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "receiveQuoteToken",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_RBelowBackToOne",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "payQuoteToken",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quoteBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "targetQuoteAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "_RBelowBuyBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "payQuoteToken",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quoteBalance",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "targetQuoteAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "_RBelowSellBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "receieQuoteToken",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "targetBaseTokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "_ROneBuyBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "payQuoteToken",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "targetQuoteTokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "_ROneSellBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "receiveQuoteToken",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_R_STATUS_",
+				"outputs": [
+					{
+						"internalType": "enum Types.RStatus",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_SELLING_ALLOWED_",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_SUPERVISOR_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_TARGET_BASE_TOKEN_AMOUNT_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_TARGET_QUOTE_TOKEN_AMOUNT_",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_TRADE_ALLOWED_",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "_queryBuyBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "payQuote",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lpFeeBase",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mtFeeBase",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Types.RStatus",
+						"name": "newRStatus",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newQuoteTarget",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newBaseTarget",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "_querySellBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "receiveQuote",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lpFeeQuote",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mtFeeQuote",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Types.RStatus",
+						"name": "newRStatus",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newQuoteTarget",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newBaseTarget",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxPayQuote",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "buyBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "claimAssets",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "claimOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositBase",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositBaseTo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositQuote",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositQuoteTo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "disableBaseDeposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "disableBuying",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "disableQuoteDeposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "disableSelling",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "disableTrading",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "donateBaseToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "donateQuoteToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "enableBaseDeposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "enableBuying",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "enableQuoteDeposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "enableSelling",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "enableTrading",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "finalSettlement",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "lp",
+						"type": "address"
+					}
+				],
+				"name": "getBaseCapitalBalanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getExpectedTarget",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "baseTarget",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quoteTarget",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "lp",
+						"type": "address"
+					}
+				],
+				"name": "getLpBaseBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "lpBalance",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "lp",
+						"type": "address"
+					}
+				],
+				"name": "getLpQuoteBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "lpBalance",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMidPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "midPrice",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOraclePrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "lp",
+						"type": "address"
+					}
+				],
+				"name": "getQuoteCapitalBalanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalBaseCapital",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalQuoteCapital",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "getWithdrawBasePenalty",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "penalty",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "getWithdrawQuotePenalty",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "penalty",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "supervisor",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "maintainer",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "baseToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "quoteToken",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "oracle",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lpFeeRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "mtFeeRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "k",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasPriceLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "queryBuyBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "payQuote",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "querySellBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "receiveQuote",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "retrieve",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minReceiveQuote",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "sellBaseToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newBaseBalanceLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "setBaseBalanceLimit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newGasPriceLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "setGasPriceLimit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newK",
+						"type": "uint256"
+					}
+				],
+				"name": "setK",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newLiquidityPorviderFeeRate",
+						"type": "uint256"
+					}
+				],
+				"name": "setLiquidityProviderFeeRate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newMaintainer",
+						"type": "address"
+					}
+				],
+				"name": "setMaintainer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newMaintainerFeeRate",
+						"type": "uint256"
+					}
+				],
+				"name": "setMaintainerFeeRate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOracle",
+						"type": "address"
+					}
+				],
+				"name": "setOracle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newQuoteBalanceLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "setQuoteBalanceLimit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newSupervisor",
+						"type": "address"
+					}
+				],
+				"name": "setSupervisor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "version",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawAllBase",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "withdrawAllBaseTo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawAllQuote",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "withdrawAllQuoteTo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawBase",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawBaseTo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawQuote",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawQuoteTo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "DODO Breeder",
+			"methods": {},
+			"title": "DODO"
+		},
+		"userdoc": {
+			"methods": {},
+			"notice": "Entrance for users"
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"browser/github/DODOEX/dodo-smart-contract/contracts/dodo.sol": "DODO"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"browser/github/DODOEX/dodo-smart-contract/contracts/dodo.sol": {
+			"keccak256": "0xc5fda191b60307ecf600a789c59de657f9b7ad83f3d8e905eb4d6eef15519fd8",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://06da52e9af78686a9ff9d2182480f992f731ec8b3184ee8ccb7cd31a2e5c88f7",
+				"dweb:/ipfs/QmbmGLkmXAzP9jqp6YjNmi1bzdnnMwo4jU6MiSH65UEHzf"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/impl/Admin.sol": {
+			"keccak256": "0x04a6c300c659e67733e5d89e709e052f0d095a5e825a467410d49ef6691fae56",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://f6d4417d9c9bb16431ab7622d6e0f8e8f2233fbad1e71d6ff7971926d9470807",
+				"dweb:/ipfs/QmXqLYnbs6Yuhhg9knkNx5AvZWqxkvZsVKmPUJo2j9FqtE"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/impl/DODOLpToken.sol": {
+			"keccak256": "0x93bb74398b96b44febba31ad63435edae743142088311a325215aaa34d35b512",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://0991fee8f385b3266ff39672b209906557d1be7308b5a35749f3f8453f427d2b",
+				"dweb:/ipfs/Qmf8sKLSQkcniYin94QfNGc8GLMaVrLzQUq2grV5Hu7JyU"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/impl/LiquidityProvider.sol": {
+			"keccak256": "0x1bbb3571a539c9098a617410934ef589e40c6a910f155c31ff0680b2d754c3a9",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://ec97b6eb2b09157237590eae3c7b9b34720c8cf8b392d78aa1ef41c1c543c1ed",
+				"dweb:/ipfs/QmYLVFUrD3fbgHFyhWTPmqyS41SDi8kyegS4MpVMdDyr9V"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/impl/Pricing.sol": {
+			"keccak256": "0x0f86762a25b31640eee87f2be549160e57793c9dcc55170869637894e059e531",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://554189a175fa7b9bf4a21e961d85454e371245f32d72764391539eb9660ac386",
+				"dweb:/ipfs/QmYoJiqpKFSoDXpDUBrUCMmWmuQvG74DdSLLJU9Wg4Yxik"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/impl/Settlement.sol": {
+			"keccak256": "0x8167f472615dc95cf743254785eeef730a0a3b753f05f5b64391fbb9992c8ab6",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://3e2a25e398638f4bbecf434cf9b8b608c34a1271c051ee7e411b6c2c32702439",
+				"dweb:/ipfs/QmUQmysLQ1k8uBWGzsTdmGCqyWQhZ4xtzPWAfsALGWYLPh"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/impl/Storage.sol": {
+			"keccak256": "0xbf15f2a72d59bbf0ed32b2a24fc4a68d45ffaa60dd2b2c1cc555d03ec1cd2f0a",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://7289884a2a8939295c4f61aeb7754bd3ce49e9d09188a1eddb762342589f36be",
+				"dweb:/ipfs/QmaHYH51wieAyxBDASyHyfYSeu6UJNV7adD3AceeZXCgcZ"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/impl/Trader.sol": {
+			"keccak256": "0xab5ce57077297442005e0d756fbab21af03e8a7ee869e23c774df24c480a4641",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://c09c05a14b0b6512ede03eedd6819f9ed41406a2ffc88de425dc21454de9c726",
+				"dweb:/ipfs/QmTCcqZ7KhS9RG2hg9UYv7VtBenSiBmUx4h3MyYwYcKMja"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/intf/IDODOCallee.sol": {
+			"keccak256": "0x229c6157d9f467f52d98634966a88fce7c7d68d1b7ee5c4897957b3bc33ee2c5",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://d9ca56838de93c5727da081665c37fb7e4448cc584e3ff72f5d9867775c0ee5f",
+				"dweb:/ipfs/QmTVeQ8EJqnrSYsu4GU4jhaUzW9FC45fAoXKHniBNXNaZs"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/intf/IDODOLpToken.sol": {
+			"keccak256": "0x2183977c7a3cf5aa8d2f56d2167bf59515e34a8e4ebd2402efa85b612631955f",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://61766578f8d1bef7f51912a5327e8d4e95e3d9adb509e9486b4e2c8cf179f5e6",
+				"dweb:/ipfs/QmXJRK4JKMrJkdn7BFVueoNRixsu26shnX3Dxeb5T9JKK4"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/intf/IERC20.sol": {
+			"keccak256": "0x40355eddd56b5a9ac760c5a056e135946b372b724fb632415792ad82c60a9ac5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://66e932da3bb19bdd0a7b17715099bc419f087cbf06809885fd98a7a35574387e",
+				"dweb:/ipfs/Qmdv97dz4214Xrbb8xGbuYPJtvmqAoUcXuSCFgA8NzBUsg"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/intf/IOracle.sol": {
+			"keccak256": "0xed4a31155c30a764366aba2244e42406269e59618088f93c02f1b4c9fec9e53c",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://bd3d50110c9120d942f7713e1cfced848ba7721ea336b2d9c4a87a6eb2a82ca9",
+				"dweb:/ipfs/QmTYFeDcAyA2JpfoL1LsGLgj4TeRJxNV1rM27vdcaZSwpF"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/lib/DODOMath.sol": {
+			"keccak256": "0xa6237324768b6487534b1ffc1523b00d287853bead95c83f69ef5aa7f23f99ff",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://a8e2c74a473ee3465607af68dc4eb4755514c3077c82935e75cf79bbde786feb",
+				"dweb:/ipfs/QmQmCB9PsDPUuEw5rKCkw6mdx15rhG6CutsZzVcF14kQCh"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/lib/DecimalMath.sol": {
+			"keccak256": "0x9a093cbac4e37ed4ee5e27495dae08754bbfec81f7c0ceb57a5a7ac4f362208f",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://1ddd9e5de1c555f0d1232e148fe18574e6adaa348e792844d9011bbd39bf908f",
+				"dweb:/ipfs/QmSgZNwPNqCrQC4kJNdwH3iQNasbTfw2cbTtAtNVcpqnYc"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/lib/InitializableOwnable.sol": {
+			"keccak256": "0xf462d86a85221f424c5a40f3c0d4a699c72a61b31ed07091ffb0e0b28b3cd137",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://3d92b79f4527b3d7812395c41e5d0786309a121b99af3bff5cd7663f7255d335",
+				"dweb:/ipfs/QmYkQANWtKsJNHKeD6PrtUFeC3D6uWAxhXjB97eBHwqtzK"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/lib/Ownable.sol": {
+			"keccak256": "0xb7a2ca6570834e4784e86d19fd5a4b6b1eff22a4586dc240659943396a365aa5",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://5855a493c78e787d7effd87d9c661acbcd19ca1e1ba72dbeaa91c3c8db29cbb4",
+				"dweb:/ipfs/QmSddEexZ5okMatgoQ5JZRoJqe7BwsJwwWA2o1kKx7vbTH"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/lib/ReentrancyGuard.sol": {
+			"keccak256": "0xc9c3fc946350fd72083a9d5b1327ff923533ef37b054bc7b6007562b20b0faaf",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://fc140417457139fb240427629673bfaf970c5d4568ad1cfe582764c6e4855bbb",
+				"dweb:/ipfs/Qmd7ESYe5kyM6NYiSzeFE74f1YGGPXzpdVd5qnYg2AvgH8"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/lib/SafeERC20.sol": {
+			"keccak256": "0xe11bb64537b764f7b0b64f817ffa0b4b278c2017474ff985428225b3f0928295",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://c756ca959d2326d58ed49b8a2d39100866197596ba09240e4f1bf861399a6e96",
+				"dweb:/ipfs/QmdgzWZNT614vRnb5zsDva91bkLpvZmCVV5d6xetqsyedR"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/lib/SafeMath.sol": {
+			"keccak256": "0x57d750628881687f826b54f60cbfd46c1a172433eed892bbb123f91869886af1",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://b40bd7946010ddae9679f36630510217dcaa9cb8643824f9edc8ef52bda95717",
+				"dweb:/ipfs/QmZSjpfUGyrmokZyaMc74a8h6zy2qFVECPVP8VfTvzNEFb"
+			]
+		},
+		"browser/github/DODOEX/dodo-smart-contract/contracts/lib/Types.sol": {
+			"keccak256": "0x0aebcc897b4de833e87e46a11e5a70d2b6e1d2fd99ebdf9e32e6421924f18b15",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://a1098dace4f0664b0e3f5c3b6ce535ad2aba52e68fb6d1ea94b09debc06ed33c",
+				"dweb:/ipfs/QmRbiq7M3Y8utAXaPWmVooGmoYF27N5dKVn6QYTaDFwqdP"
+			]
+		}
+	},
+	"version": 1
+}

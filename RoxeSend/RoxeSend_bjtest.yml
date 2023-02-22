@@ -1,0 +1,68 @@
+
+host: http://xxx:38889
+chain_host: http://xxx/v1
+commerce_host: http://xxx:38888
+commerce_token: "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQWRtaW5pc3RyYXRvciIsImFjY291bnRfaWQiOjIxLCJicmFuY2hfaWQiOjE3LCJtZXJjaGFudF9pZCI6MSwiaXNzIjoiUk9YRSIsImF1ZCI6ImZpb25hNzc3Iiwic3ViIjoibG9naW4iLCJuYmYiOjE2MzY0NTI4ODZ9.4nZ2xcRUYM5Vz3ET1dQr5zw0AK3_moTcZrxaULapX3c"
+
+# 用户A, 通过了kyc
+user_id: "100144"
+user_account: "agjyrafzwlng"
+user_login_token: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiI4NiIsImlzcyI6IlJPWEUiLCJhdWQiOiIxMDAxNDQiLCJzdWIiOiJVU0VSX0xPR0lOIiwibmJmIjoxNjM2MzYxNzc5fQ.ltOdtqDjgUrj9d88IHD90KDD_4ggL-94OXhAIATUSiY"
+# 用户B  通过了KA
+user_id_b: "100220"
+user_account_b: "uksnk2ib3wck"
+user_login_token_b: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiI4NiIsImlzcyI6IlJPWEUiLCJhdWQiOiIxMDAyMjAiLCJzdWIiOiJVU0VSX0xPR0lOIiwibmJmIjoxNjM0ODA2NjQ3fQ.42UAg3XfKCIEd5N_wUpONF8sD-X7nGD-DnLn0YKvpqs"
+# 用户C  没有通过kyc
+user_id_c: "100147"
+user_account_c: "yf2r51s35uqp"
+user_login_token_c: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiI4NiIsImlzcyI6IlJPWEUiLCJhdWQiOiIxMDAxNDciLCJzdWIiOiJVU0VSX0xPR0lOIiwibmJmIjoxNjMxNTE3OTYxfQ.bbQjxl1B_yOxIgSTuOwg-_2pSp-7SKEhfyExY1dODUk"
+
+L1Limit:
+  24HourAmount: 0
+  90DayAmount: 0
+L2Limit:
+  24HourAmount: 2500
+  90DayAmount: 50000
+L3Limit:
+  24HourAmount: 10000
+  90DayAmount: 50000
+
+currency:
+  - USD
+
+is_check_db: True
+sql_cfg:
+  mysql_host: xxxx
+  port: 3306
+  user: xxxx
+  password: xxxx
+  db: xxxx
+
+redis_cfg:
+  host: xxxx
+  port: 6379
+  password: xxxx
+  db: 0
+
+user_outer_bank: &user_outer_bank # 出金银行卡的必填字段
+  recipientCountry: US
+  receiverFirstName: Li XX
+  routingNumber: "111000025"
+  accountNumber: "123451234512"
+  accountType: individual
+  receiverCurrency: USD
+  payOutMethod: bank
+
+user_outer_bank_1:
+  name: Jethro Gibbs
+  routingNumber: "111000025"
+  accountNumber: "000123123123"
+  bankName: America Bank
+  countryCode: US
+
+user_outer_bank_2:
+  <<: *user_outer_bank
+  name: Jethro Li
+  routingNumber: 123456789
+  accountNumber: 123456789012
+  countryCode: US

@@ -1,0 +1,92 @@
+
+host: http://xxxxp:38889
+
+# 用户A, 通过了kyc
+user_id: "100144"
+user_account: "xxxx"
+user_login_token: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiI4NiIsImlzcyI6IlJPWEUiLCJhdWQiOiIxMDAxNDQiLCJzdWIiOiJVU0VSX0xPR0lOIiwibmJmIjoxNjMxOTU0MDI4fQ.jGCyitaOW6uyOvkkAIZkL_NwMbPMhxcTUKC83D5Jl-Q"
+# 用户B  通过了KA
+user_id_b: "100220"
+user_account_b: "xxxx"
+user_login_token_b: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiI4NiIsImlzcyI6IlJPWEUiLCJhdWQiOiIxMDAyMjAiLCJzdWIiOiJVU0VSX0xPR0lOIiwibmJmIjoxNjMxOTMwODMxfQ.oRJD3lv9VSyFSFx9kp1TdTsEp-C-ZJXxT6tjNaPC96w"
+# 用户C  没有通过kyc
+user_id_c: "100147"
+user_account_c: "xxxx"
+user_login_token_c: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiI4NiIsImlzcyI6IlJPWEUiLCJhdWQiOiIxMDAxNDciLCJzdWIiOiJVU0VSX0xPR0lOIiwibmJmIjoxNjMxNTE3OTYxfQ.bbQjxl1B_yOxIgSTuOwg-_2pSp-7SKEhfyExY1dODUk"
+
+is_check_db: True
+sql_cfg:
+  mysql_host: xxxx
+  port: 3306
+  user: xxxx
+  password: xxxx
+  db: xxxx
+
+redis_cfg:
+  host: xxxx
+  port: 6379
+  password: xxxx
+  db: 2
+
+us_ka_info:
+  country: "US"
+  birthday: "1991-01-01"
+  zip: "1230123"
+  firstName: "Zhang"
+  lastName: "San"
+  city: "Helena"
+  addressLine1: "addressLine1 123"
+  state: "Montana"
+  ssn: "123456789"
+
+eu_ka_info:
+  country: "AT"
+  birthday: "1991-01-01"
+  zip: "1230123"
+  firstName: "Zhang"
+  lastName: "San"
+  city: "abc"
+  addressLine1: "addressLine1 123"
+  state: "asdaa"
+
+other_ka_info:
+  country: "AD"
+  birthday: "1991-01-01"
+  firstName: "Zhang"
+  lastName: "San"
+
+us_km_info:
+  country: "US"
+  proofAddressType: "UTILITY_BILL"
+  utilityBill: "utilityBill"
+  identifySource: "USER_CENTER"
+  idType: "PASSPORT"
+  passport: "passport"
+  idNumber: "1234561234"
+#  idFront: "idFront"
+#  idBack: "idBack"
+  selfPhoto: "photo.jpg"
+  expirationDate: "2030-10-10"
+
+eu_km_info:
+  country: "AT"
+  proofAddressType: "BANK_STATEMENT"
+  bankStatement: "bankStatement123"
+  identifySource: "USER_CENTER"
+  idType: "DRIVER_LICENSE"
+  driverLicense: "driverLicense1234"
+  idNumber: "1234561234"
+  selfPhoto: "photo.jpg"
+  expirationDate: "2030-10-10"
+
+other_km_info:
+  country: "AD"
+  proofAddressType: "UTILITY_BILL"
+  utilityBill: "utilityBill"
+  identifySource: "USER_CENTER"
+  idType: "NATIONAL_ID"
+  idNumber: "1234561234"
+  idFront: "idFront"
+  idBack: "idBack"
+  selfPhoto: "photo.jpg"
+  expirationDate: "2030-10-10"

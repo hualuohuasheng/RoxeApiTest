@@ -1,0 +1,111 @@
+[INFO] 2022-06-15 15:57:36,511 [MainThread: 4812494336]: [dodo:494]: newBaseTarget: 16850054359518792894
+[INFO] 2022-06-15 15:57:36,511 [MainThread: 4812494336]: [dodo:495]: newQuoteTarget: 50120921541934
+[INFO] 2022-06-15 15:57:36,512 [MainThread: 4812494336]: [dodo:502]: 按base收费, lpFeeBase: 69591
+[INFO] 2022-06-15 15:57:36,512 [MainThread: 4812494336]: [dodo:503]: 按base收费, mtFeeBase: 12280
+[INFO] 2022-06-15 15:57:36,512 [MainThread: 4812494336]: [dodo:504]: 加上费用后购买的数量buyBaseAmount: 102421871
+[INFO] 2022-06-15 15:57:37,260 [MainThread: 4812494336]: [dodo:506]: 转账费用为: 0
+[INFO] 2022-06-15 15:57:37,260 [MainThread: 4812494336]: [dodo:508]: buyBaseAmount加上转账费用为: 102421871
+[INFO] 2022-06-15 15:57:37,593 [MainThread: 4812494336]: [dodo:512]: mtFee的转账费用为: 0
+[INFO] 2022-06-15 15:57:37,593 [MainThread: 4812494336]: [dodo:513]: mtFee的实际转账数量为: 12280
+[INFO] 2022-06-15 15:57:37,886 [MainThread: 4812494336]: [dodo:521]: 转账out数量为 102340000,转账费用: 0
+[INFO] 2022-06-15 15:57:37,886 [MainThread: 4812494336]: [dodo:522]: 加上转账费用后购买的数量buyBaseAmount: 102421871
+[INFO] 2022-06-15 15:57:37,886 [MainThread: 4812494336]: [dodo:547]: 需要付出的quote资产, payQuote: 0
+[INFO] 2022-06-15 15:57:37,886 [MainThread: 4812494336]: [dodo:548]: after trade newRStatus: 1
+[INFO] 2022-06-15 15:58:45,730 [MainThread: 4746143232]: [dodo:561]: newBaseTarget: 16849581196485327474
+[INFO] 2022-06-15 15:58:45,730 [MainThread: 4746143232]: [dodo:562]: newQuoteTarget: 50120921541934
+[INFO] 2022-06-15 15:58:45,730 [MainThread: 4746143232]: [dodo:564]: sellBaseAmount: 102340000
+[INFO] 2022-06-15 15:58:45,730 [MainThread: 4746143232]: [dodo:572]: backToOnePayBase: 16849581166734229717
+[INFO] 2022-06-15 15:58:45,730 [MainThread: 4746143232]: [dodo:573]: backToOneReceiveQuote: 50977036201799
+[INFO] 2022-06-15 15:58:45,730 [MainThread: 4746143232]: [dodo:599]: with fee receiveQuote: 0
+[INFO] 2022-06-15 15:58:45,792 [MainThread: 4746143232]: [dodo:609]: transfer_fee: 0
+[INFO] 2022-06-15 15:58:45,792 [MainThread: 4746143232]: [dodo:610]: mt fee: 0
+[INFO] 2022-06-15 15:58:45,792 [MainThread: 4746143232]: [dodo:611]: after fee receiveQuote: 0
+[INFO] 2022-06-15 15:58:45,793 [MainThread: 4746143232]: [dodo:612]: after fee receiveQuote - transfer_fee: 0
+[INFO] 2022-06-15 15:58:45,793 [MainThread: 4746143232]: [dodo:613]: lpFeeQuote: 0
+[INFO] 2022-06-15 15:58:45,793 [MainThread: 4746143232]: [dodo:614]: mtFeeQuote: 0, 减去转账费用为:0
+[INFO] 2022-06-15 15:58:45,793 [MainThread: 4746143232]: [dodo:615]: after trade newRStatus: 1
+[INFO] 2022-06-15 15:59:08,410 [MainThread: 4704437760]: [dodo:561]: newBaseTarget: 16848004274204246500
+[INFO] 2022-06-15 15:59:08,410 [MainThread: 4704437760]: [dodo:562]: newQuoteTarget: 50120921541934
+[INFO] 2022-06-15 15:59:08,411 [MainThread: 4704437760]: [dodo:564]: sellBaseAmount: 102340000
+[INFO] 2022-06-15 15:59:08,411 [MainThread: 4704437760]: [dodo:572]: backToOnePayBase: 16848004244453148743
+[INFO] 2022-06-15 15:59:08,411 [MainThread: 4704437760]: [dodo:573]: backToOneReceiveQuote: 50977036201799
+[INFO] 2022-06-15 15:59:08,411 [MainThread: 4704437760]: [dodo:599]: with fee receiveQuote: 0
+[INFO] 2022-06-15 15:59:08,471 [MainThread: 4704437760]: [dodo:609]: transfer_fee: 0
+[INFO] 2022-06-15 15:59:08,471 [MainThread: 4704437760]: [dodo:610]: mt fee: 0
+[INFO] 2022-06-15 15:59:08,471 [MainThread: 4704437760]: [dodo:611]: after fee receiveQuote: 0
+[INFO] 2022-06-15 15:59:08,471 [MainThread: 4704437760]: [dodo:612]: after fee receiveQuote - transfer_fee: 0
+[INFO] 2022-06-15 15:59:08,471 [MainThread: 4704437760]: [dodo:613]: lpFeeQuote: 0
+[INFO] 2022-06-15 15:59:08,471 [MainThread: 4704437760]: [dodo:614]: mtFeeQuote: 0, 减去转账费用为:0
+[INFO] 2022-06-15 15:59:08,471 [MainThread: 4704437760]: [dodo:615]: after trade newRStatus: 1
+[INFO] 2022-06-15 16:00:11,782 [MainThread: 4589577728]: [dodo:561]: newBaseTarget: 16848477304400131914
+[INFO] 2022-06-15 16:00:11,782 [MainThread: 4589577728]: [dodo:562]: newQuoteTarget: 50120921541934
+[INFO] 2022-06-15 16:00:11,782 [MainThread: 4589577728]: [dodo:564]: sellBaseAmount: 102340000
+[INFO] 2022-06-15 16:00:11,783 [MainThread: 4589577728]: [dodo:572]: backToOnePayBase: 16848477274649034157
+[INFO] 2022-06-15 16:00:11,783 [MainThread: 4589577728]: [dodo:573]: backToOneReceiveQuote: 50977036201799
+[INFO] 2022-06-15 16:00:11,783 [MainThread: 4589577728]: [dodo:599]: with fee receiveQuote: 0
+[INFO] 2022-06-15 16:00:11,795 [MainThread: 4589577728]: [dodo:609]: transfer_fee: 0
+[INFO] 2022-06-15 16:00:11,795 [MainThread: 4589577728]: [dodo:610]: mt fee: 0
+[INFO] 2022-06-15 16:00:11,795 [MainThread: 4589577728]: [dodo:611]: after fee receiveQuote: 0
+[INFO] 2022-06-15 16:00:11,795 [MainThread: 4589577728]: [dodo:612]: after fee receiveQuote - transfer_fee: 0
+[INFO] 2022-06-15 16:00:11,795 [MainThread: 4589577728]: [dodo:613]: lpFeeQuote: 0
+[INFO] 2022-06-15 16:00:11,796 [MainThread: 4589577728]: [dodo:614]: mtFeeQuote: 0, 减去转账费用为:0
+[INFO] 2022-06-15 16:00:11,796 [MainThread: 4589577728]: [dodo:615]: after trade newRStatus: 1
+[INFO] 2022-08-30 15:22:31,011 [MainThread: 4593800704]: [dodo:561]: newBaseTarget: 11357718743412592612
+[INFO] 2022-08-30 15:22:31,012 [MainThread: 4593800704]: [dodo:562]: newQuoteTarget: 50122965256632
+[INFO] 2022-08-30 15:22:31,012 [MainThread: 4593800704]: [dodo:564]: sellBaseAmount: 102340000
+[INFO] 2022-08-30 15:22:31,012 [MainThread: 4593800704]: [dodo:572]: backToOnePayBase: 11357718729488213188
+[INFO] 2022-08-30 15:22:31,012 [MainThread: 4593800704]: [dodo:573]: backToOneReceiveQuote: 52065719405127
+[INFO] 2022-08-30 15:22:31,012 [MainThread: 4593800704]: [dodo:599]: with fee receiveQuote: 0
+[INFO] 2022-08-30 15:22:31,047 [MainThread: 4593800704]: [dodo:609]: transfer_fee: 0
+[INFO] 2022-08-30 15:22:31,047 [MainThread: 4593800704]: [dodo:610]: mt fee: 0
+[INFO] 2022-08-30 15:22:31,047 [MainThread: 4593800704]: [dodo:611]: after fee receiveQuote: 0
+[INFO] 2022-08-30 15:22:31,047 [MainThread: 4593800704]: [dodo:612]: after fee receiveQuote - transfer_fee: 0
+[INFO] 2022-08-30 15:22:31,047 [MainThread: 4593800704]: [dodo:613]: lpFeeQuote: 0
+[INFO] 2022-08-30 15:22:31,047 [MainThread: 4593800704]: [dodo:614]: mtFeeQuote: 0, 减去转账费用为:0
+[INFO] 2022-08-30 15:22:31,047 [MainThread: 4593800704]: [dodo:615]: after trade newRStatus: 1
+[INFO] 2022-08-30 15:22:59,345 [MainThread: 4613658112]: [dodo:561]: newBaseTarget: 92148712759468529689
+[INFO] 2022-08-30 15:22:59,345 [MainThread: 4613658112]: [dodo:562]: newQuoteTarget: 50122965256632
+[INFO] 2022-08-30 15:22:59,345 [MainThread: 4613658112]: [dodo:564]: sellBaseAmount: 102340000
+[INFO] 2022-08-30 15:22:59,345 [MainThread: 4613658112]: [dodo:572]: backToOnePayBase: 92148712745544150265
+[INFO] 2022-08-30 15:22:59,345 [MainThread: 4613658112]: [dodo:573]: backToOneReceiveQuote: 52065719405127
+[INFO] 2022-08-30 15:22:59,345 [MainThread: 4613658112]: [dodo:599]: with fee receiveQuote: 0
+[INFO] 2022-08-30 15:22:59,357 [MainThread: 4613658112]: [dodo:609]: transfer_fee: 0
+[INFO] 2022-08-30 15:22:59,357 [MainThread: 4613658112]: [dodo:610]: mt fee: 0
+[INFO] 2022-08-30 15:22:59,357 [MainThread: 4613658112]: [dodo:611]: after fee receiveQuote: 0
+[INFO] 2022-08-30 15:22:59,357 [MainThread: 4613658112]: [dodo:612]: after fee receiveQuote - transfer_fee: 0
+[INFO] 2022-08-30 15:22:59,358 [MainThread: 4613658112]: [dodo:613]: lpFeeQuote: 0
+[INFO] 2022-08-30 15:22:59,358 [MainThread: 4613658112]: [dodo:614]: mtFeeQuote: 0, 减去转账费用为:0
+[INFO] 2022-08-30 15:22:59,358 [MainThread: 4613658112]: [dodo:615]: after trade newRStatus: 1
+[INFO] 2022-08-30 15:24:28,750 [MainThread: 4567881216]: [dodo:561]: newBaseTarget: 12069358233
+[INFO] 2022-08-30 15:24:28,750 [MainThread: 4567881216]: [dodo:562]: newQuoteTarget: 5412053
+[INFO] 2022-08-30 15:24:28,750 [MainThread: 4567881216]: [dodo:564]: sellBaseAmount: 102340000
+[INFO] 2022-08-30 15:24:28,750 [MainThread: 4567881216]: [dodo:599]: with fee receiveQuote: 0
+[INFO] 2022-08-30 15:24:28,762 [MainThread: 4567881216]: [dodo:609]: transfer_fee: 0
+[INFO] 2022-08-30 15:24:28,762 [MainThread: 4567881216]: [dodo:610]: mt fee: 0
+[INFO] 2022-08-30 15:24:28,762 [MainThread: 4567881216]: [dodo:611]: after fee receiveQuote: 0
+[INFO] 2022-08-30 15:24:28,762 [MainThread: 4567881216]: [dodo:612]: after fee receiveQuote - transfer_fee: 0
+[INFO] 2022-08-30 15:24:28,762 [MainThread: 4567881216]: [dodo:613]: lpFeeQuote: 0
+[INFO] 2022-08-30 15:24:28,762 [MainThread: 4567881216]: [dodo:614]: mtFeeQuote: 0, 减去转账费用为:0
+[INFO] 2022-08-30 15:24:28,763 [MainThread: 4567881216]: [dodo:615]: after trade newRStatus: 2
+[INFO] 2022-08-30 15:24:35,509 [MainThread: 4538377728]: [dodo:561]: newBaseTarget: 12069358233
+[INFO] 2022-08-30 15:24:35,509 [MainThread: 4538377728]: [dodo:562]: newQuoteTarget: 5412053
+[INFO] 2022-08-30 15:24:35,509 [MainThread: 4538377728]: [dodo:564]: sellBaseAmount: 102340000
+[INFO] 2022-08-30 15:24:35,509 [MainThread: 4538377728]: [dodo:599]: with fee receiveQuote: 0
+[INFO] 2022-08-30 15:24:35,522 [MainThread: 4538377728]: [dodo:609]: transfer_fee: 0
+[INFO] 2022-08-30 15:24:35,522 [MainThread: 4538377728]: [dodo:610]: mt fee: 0
+[INFO] 2022-08-30 15:24:35,522 [MainThread: 4538377728]: [dodo:611]: after fee receiveQuote: 0
+[INFO] 2022-08-30 15:24:35,522 [MainThread: 4538377728]: [dodo:612]: after fee receiveQuote - transfer_fee: 0
+[INFO] 2022-08-30 15:24:35,522 [MainThread: 4538377728]: [dodo:613]: lpFeeQuote: 0
+[INFO] 2022-08-30 15:24:35,522 [MainThread: 4538377728]: [dodo:614]: mtFeeQuote: 0, 减去转账费用为:0
+[INFO] 2022-08-30 15:24:35,522 [MainThread: 4538377728]: [dodo:615]: after trade newRStatus: 2
+[INFO] 2022-08-30 15:25:01,190 [MainThread: 4708763136]: [dodo:561]: newBaseTarget: 12069358233
+[INFO] 2022-08-30 15:25:01,190 [MainThread: 4708763136]: [dodo:562]: newQuoteTarget: 5412053
+[INFO] 2022-08-30 15:25:01,190 [MainThread: 4708763136]: [dodo:564]: sellBaseAmount: 102340000
+[INFO] 2022-08-30 15:25:01,190 [MainThread: 4708763136]: [dodo:599]: with fee receiveQuote: 0
+[INFO] 2022-08-30 15:25:01,199 [MainThread: 4708763136]: [dodo:609]: transfer_fee: 0
+[INFO] 2022-08-30 15:25:01,199 [MainThread: 4708763136]: [dodo:610]: mt fee: 0
+[INFO] 2022-08-30 15:25:01,199 [MainThread: 4708763136]: [dodo:611]: after fee receiveQuote: 0
+[INFO] 2022-08-30 15:25:01,200 [MainThread: 4708763136]: [dodo:612]: after fee receiveQuote - transfer_fee: 0
+[INFO] 2022-08-30 15:25:01,200 [MainThread: 4708763136]: [dodo:613]: lpFeeQuote: 0
+[INFO] 2022-08-30 15:25:01,200 [MainThread: 4708763136]: [dodo:614]: mtFeeQuote: 0, 减去转账费用为:0
+[INFO] 2022-08-30 15:25:01,200 [MainThread: 4708763136]: [dodo:615]: after trade newRStatus: 2

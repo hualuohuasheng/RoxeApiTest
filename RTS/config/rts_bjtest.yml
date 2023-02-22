@@ -1,0 +1,126 @@
+# RTSDataConfig
+
+host: http://xxxx
+chain_host: http://xxxx # 最新变更2022.06.30
+
+api_id: xxxx
+sec_key: xxxx
+ssl_pub_key: rts_rsa_public_key.pem
+ssl_pri_key: keys/rsa_private_key.pem
+
+rmn_node: &rmn_node fape1meh4bsz
+mock_node: &mock_node ijeobkhzuspu
+gme_node: &gme_node hqw4usgdmgnx
+rana_node: &rana_node ieqnv2lurwaj
+terrapay_node_ph: &terrapay_node_ph huuzj1hpycrx
+terrapay_node_th: &terrapay_node_th hpkk2guqn54w
+nium_node: &nium_node iovqxmagbm5m
+cebuana_node: &cebuana_node ponoim2hcpin
+gcash_node: &gcash_node idlzjsbeza4m
+checkout_node: &checkout_node hpuuz5siv3tr
+
+channel_name:
+  *mock_node: MOCK
+  *gme_node: GME
+  *rana_node: RANA
+  *terrapay_node_ph: TERRAPAY
+  *terrapay_node_th: TERRAPAY
+  *nium_node: NIUM
+  *cebuana_node: CEBUANA
+  *gcash_node: GCASH
+  *checkout_node: CHECKOUT
+
+channel_nodes:
+  - *mock_node
+  - *terrapay_node_ph
+  - *terrapay_node_th
+  - *nium_node
+  - *cebuana_node
+  - *gcash_node
+
+#node_code: FIAT_US_0001
+node_code_sn:
+  PHP: crxaptw4rqcf
+  US: *rmn_node
+  GB: huu4lssdbmbt
+  CNY: hpuuz5siv3tr
+  INR: hqw4usgdmgnx
+
+node_code_pn:
+  US: pn.test.us
+  GB: pn.test.gb
+  PH: pn.test.ph
+
+# 通过合约转账的链上账户，需配合私钥使用
+chain_account: rsstestbtc11
+chain_pri_key: xxxx
+
+user_account: f3viuzqrqq4d
+user_account_2: z5hkbojz2tjn
+
+# 100276/US
+sourceRoxeAccount: "fzrszy2uh2ez"
+targetRoxeAccount: "f3viuzqrqq4d"
+# 100356/PH
+sourceRoxeAccount_2: "v4twt4yhqtft"
+targetRoxeAccount_2: "crxaptw4rqcf"
+
+token_1: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiI4NiIsImlzcyI6IlJPWEUiLCJhdWQiOiIxMDAyNzYiLCJzdWIiOiJVU0VSX0xPR0lOIiwibmJmIjoxNjQ1NzgzNDY3fQ.kMAXg-qe7wxpwtfVRMuivcRqUmVSnRl8E0ukwn8wvh0"
+userId_1: "100276"
+
+# 持有ach账户的user信息
+ach_user_token: "eyJhbGciOiJIUzI1NiJ9.eyJpdGMiOiIxIiwiaXNzIjoiUk9YRSIsImF1ZCI6IjEwMDM1NiIsInN1YiI6IlVTRVJfTE9HSU4iLCJuYmYiOjE2NDYwMjg5ODZ9.5XHfFKtoqJYYi_KNVPxOfFquepBeF8k3rMKvIScm0hk"
+ach_user_id: "100356"
+ach_user_account: "v4twt4yhqtft"
+
+contract_info:
+  - name: re.usdphp
+    in: USD
+    out: PHP
+  - USD_GBP
+  - USD_INR
+  - USD_HKD
+
+currency_fiat_ro:
+  - fiat: USD
+    ro: USD.ROXE
+    country: US
+    innerNodeCode: ""
+    outerNodeCode: ""
+
+out_currency_info:
+  - fiat: USD
+    country: US
+    innerNodeCode: ""
+    outerNodeCode: ""
+    node_code: fape1meh4bsz
+  - fiat: PHP
+    country: PH
+    innerNodeCode: ""
+    outerNodeCode: ""
+    node_code: fape1meh4bsz
+  - fiat: GBP
+    country: GB
+    innerNodeCode: ""
+    outerNodeCode: ""
+    node_code: fape1meh4bsz
+  - fiat: CNY
+    country: CN
+    innerNodeCode: ""
+    outerNodeCode: ""
+    node_code: hpuuz5siv3tr
+  - fiat: INR
+    country: IN
+    innerNodeCode: ""
+    outerNodeCode: ""
+    node_code: hqw4usgdmgnx
+
+
+
+is_check_db: True
+sql_cfg:
+  mysql_host: xxxx
+  port: 3306
+  user: xxxx
+  password: xxxx
+  db: roxe_rts_v3
